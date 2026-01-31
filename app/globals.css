@@ -45,3 +45,10 @@ body {
   animation: fade-in 1.5s ease-out 0.5s both;
 }
 
+.ant-input::placeholder,
+.ant-input-affix-wrapper .ant-input::placeholder,
+textarea.ant-input::placeholder {
+  font-weight: 600 !important;
+  color: #000000 !important;
+  opacity: 1 !important;
+}

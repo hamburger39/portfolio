@@ -17,15 +17,15 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black"
+      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-black"
     >
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
           Contact
         </h2>
         <Card
-          className="bg-gray-900/50 backdrop-blur-sm border-gray-700"
-          bordered={false}
+          className="bg-black border-white"
+          bordered={true}
         >
           <Form
             form={form}
@@ -38,12 +38,12 @@ export default function ContactSection() {
               name="name"
               rules={[{ required: true, message: 'お名前を入力してください' }]}
             >
-              <Input
+              <Input  
                 prefix={<UserOutlined />}
                 placeholder="お名前"
                 size="large"
-                className="bg-gray-800 border-gray-700"
-                style={{ background: '#1f2937', borderColor: '#374151', color: '#ffffff' }}
+                className="bg-white border-gray-300 placeholder-black"
+                style={{ background: '#737373', borderColor: '#d1d5db', color: '#000000'}}
               />
             </Form.Item>
 
@@ -58,8 +58,8 @@ export default function ContactSection() {
                 prefix={<MailOutlined />}
                 placeholder="メールアドレス"
                 size="large"
-                className="bg-gray-800 border-gray-700"
-                style={{ background: '#1f2937', borderColor: '#374151', color: '#ffffff' }}
+                className="bg-white border-gray-300"
+                style={{ background: '#737373', borderColor: '#d1d5db', color: '#000000' }}
               />
             </Form.Item>
 
@@ -71,8 +71,8 @@ export default function ContactSection() {
                 placeholder="メッセージ"
                 rows={6}
                 size="large"
-                className="bg-gray-800 border-gray-700"
-                style={{ background: '#1f2937', borderColor: '#374151', color: '#ffffff' }}
+                className="bg-white border-gray-300"
+                style={{ background: '#737373', borderColor: '#d1d5db', color: '#000000' }}
               />
             </Form.Item>
 

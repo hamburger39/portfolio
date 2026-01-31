@@ -3,20 +3,20 @@
 import { Card, Row, Col } from 'antd'
 
 const skills = [
-  { name: 'JavaScript', years: 4, accent: '#F7DF1E' },
-  { name: 'TypeScript', years: 3, accent: '#3178C6' },
-  { name: 'React', years: 4, accent: '#61DAFB' },
-  { name: 'Next.js', years: 3, accent: '#000000' },
-  { name: 'HTML/CSS', years: 6, accent: '#E34F26' },
-  { name: 'Tailwind CSS', years: 3, accent: '#06B6D4' },
-  { name: 'Ant Design', years: 3, accent: '#0170FE' },
+  { name: 'JavaScript', years: 1, accent: '#F7DF1E' },
+  { name: 'TypeScript', years: 1, accent: '#3178C6' },
+  { name: 'React', years: 1, accent: '#61DAFB' },
+  { name: 'Next.js', years: 1, accent: '#000000' },
+  { name: 'HTML/CSS', years: 1, accent: '#E34F26' },
+  { name: 'Tailwind CSS', years: 1, accent: '#06B6D4' },
+  { name: 'Ant Design', years: 1, accent: '#0170FE' },
 ]
 
 export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-black"
+      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-black"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
@@ -26,8 +26,8 @@ export default function SkillsSection() {
           {skills.map((skill) => (
             <Col xs={24} sm={12} lg={8} key={skill.name}>
               <Card
-                className="bg-gray-900/50 backdrop-blur-sm border-gray-700 h-full"
-                bordered={false}
+                className="bg-black border-white h-full"
+                bordered={true}
               >
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xl font-semibold text-white">
@@ -50,8 +50,8 @@ export default function SkillsSection() {
         </Row>
         <div className="mt-12 text-center">
           <Card
-            className="bg-gray-900/50 backdrop-blur-sm border-gray-700"
-            bordered={false}
+            className="bg-black border-white"
+            bordered={true}
           >
             <h3 className="text-2xl font-semibold mb-4 text-white">
               その他の技術
