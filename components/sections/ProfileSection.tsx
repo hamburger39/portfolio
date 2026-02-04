@@ -20,12 +20,13 @@ export default function ProfileSection() {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
             <Avatar
               size={150}
+              src="/images/profile.jpg"
               icon={<UserOutlined />}
-              className="bg-blue-500"
+              className="bg-blue-500 ring-2 ring-white"
             />
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-3xl font-bold mb-4 text-white">
-                フロントエンド開発者
+                フロントエンドエンジニア
               </h3>
               <p className="text-lg text-gray-300 mb-4 leading-relaxed">
                 平林佳祐です。株式会社Univearthで業務委託契約を結んでおり、

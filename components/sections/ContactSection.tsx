@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { Card, Form, Input, Button, message } from 'antd'
 import { MailOutlined, UserOutlined } from '@ant-design/icons'
 
@@ -7,11 +8,33 @@ const { TextArea } = Input
 
 export default function ContactSection() {
   const [form] = Form.useForm()
+  const [loading, setLoading] = React.useState(false)
 
-  const onFinish = (values: any) => {
-    console.log('Form values:', values)
-    message.success('お問い合わせありがとうございます！')
-    form.resetFields()
+  const onFinish = async (values: any) => {
+    setLoading(true)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        message.success(data.message || 'お問い合わせありがとうございます！')
+        form.resetFields()
+      } else {
+        message.error(data.error || '送信に失敗しました。')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      message.error('送信に失敗しました。しばらくしてから再度お試しください。')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -82,6 +105,7 @@ export default function ContactSection() {
                 htmlType="submit"
                 size="large"
                 block
+                loading={loading}
                 className="bg-blue-500 hover:bg-blue-600"
               >
                 送信
