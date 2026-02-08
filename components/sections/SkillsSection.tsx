@@ -63,13 +63,6 @@ export default function SkillsSection() {
                 'Git',
                 'GitHub',
                 'Node.js',
-                'REST API',
-                'GraphQL',
-                'Webpack',
-                'Vite',
-                'Jest',
-                'ESLint',
-                'Prettier',
               ].map((tech) => (
                 <span
                   key={tech}
